@@ -1,0 +1,39 @@
+.container {
+    text-align: center;
+    text-align: center;
+    width: 400px;
+    height: 215px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 7px grey;
+  }
+  
+  button {
+    background-color: #c11114;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    border: solid 1px #c11114;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .big-btn {
+    width: 120px;
+    height: 40px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .btns {
+    border-top: solid 1px rgb(202, 202, 202);
+  }
+  

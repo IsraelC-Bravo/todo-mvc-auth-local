@@ -1,0 +1,41 @@
+.container {
+    text-align: center;
+    text-align: center;
+    width: 400px;
+    height: 230px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 7px grey;
+  }
+  
+  section.btn input{
+    background-color: #c11114;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    border: solid 1px #c11114;
+    margin: 10px;
+  }
+  
+  section.btn input:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  section.btn {
+    border-top: solid 1px rgb(202, 202, 202);
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  div form input{
+    border-radius: 4px;
+    margin: 3px;
+  }
+  
+  

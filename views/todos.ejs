@@ -4,28 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todos</h1>
-    <ul>
+  <section class="header">
+    <h1>Welcome to your to do list <%= user.userName %></h1>
+    <a href="/logout" class="big-btn"> <button>LOGOUT</button></a>
+  </section>
+  
+<section class="container2">
+    <ul class="leftCard">
+        <li id="topList">
+            <span class='taskDisplay'>Your Tasks</span>
+            <section class="taskInfoDisplay">
+                <span class=' priorityDisplay'> Priority </span>
+                <span class="tagDisplay"> Tag </span>
+            </section>
+            <span class='blank'> </span>
+        </li>
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
+                <span class='taskDisplay <%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+              <section class="taskInfoDisplay" data-id='<%=el._id%>'>
+                  <span class='<%= el.priority%> priorityDisplay'> <%= el.priority%> </span>
+                  <span class="tagDisplay"> <%= el.tag%> </span>
+                  <button class="del">DELETE</button>
+              </section>
             </li>
     <% }) %>    
     </ul>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
-
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <input type="submit">
-    </form>
-
-    <a href="/logout">Logout</a>
+  <div class="container">
+      <form action="/todos/createTodo" method='POST'>
+        <input type="text" placeholder="Enter Task Here" name='todoItem'>
+        <section class="choicesContainer">
+          <section class="prioContainer">
+            <p class="toDoInfo">Choose Task Priority</p>
+            <input type="radio" id="high" name="priority" value="High">
+            <label for="high">High</label><br>
+            <input type="radio" id="normal" name="priority" value="Normal" required>
+            <label for="normal">Normal</label><br>
+            <input type="radio" id="low" name="priority" value="Low">
+            <label for="low">Low</label>
+          
+          </section>
+        <section class="tagContainer">
+            <p class="toDoInfo">Choose Tag For Your Task</p>
+            <input type="radio" id="100hours" name="tags" value="100hours" required>
+            <label for="100 Hours">100hours</label><br>
+            <input type="radio" id="banki" name="tags" value="Banki">
+            <label for="banki">Banki</label><br>
+            <input type="radio" id="codewars" name="tags" value="Codewars">
+            <label for="codewars">Codewars</label>
+            <input type="radio" id="coffee" name="tags" value="Coffee Chat">
+            <label for="coffee">Coffee Chat</label><br>
+            <input type="radio" id="hitlist" name="tags" value="Hitlist" >
+            <label for="hitlist">Hitlist</label><br>
+            <input type="radio" id="network" name="tags" value="Network">
+            <label for="network">Network</label>
+            <input type="radio" id="project" name="tags" value="Project">
+            <label for="project">Project</label>
+        
+          </section>
+        </section>
+        <button type="submit" class="big-btn submit">SUBMIT</button>
+      </form>
+  </div>
+</section>
 
     <script src="js/main.js"></script>
 </body>

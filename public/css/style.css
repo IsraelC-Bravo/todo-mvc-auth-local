@@ -1,10 +1,190 @@
-h1{
-    color: red;
-}
-.completed{
+.completed {
     text-decoration: line-through;
     color: gray;
-}
-.not{
+  }
+  /* .not {
     text-decoration: underline;
-}
+  } */
+  
+  .container2 {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .container {
+    text-align: center;
+    width: 400px;
+    height: 215px;
+    min-height: 215px;
+    box-shadow: 2px 2px 7px grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  
+  button {
+    background-color: #c11114;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    border: solid 1px #c11114;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .big-btn {
+    width: 120px;
+    height: 40px;
+  }
+  
+  /* This css block handles the right card which includes everything dealing with entering a new task */
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .btns {
+    border-top: solid 1px rgb(202, 202, 202);
+  }
+  
+  .submit {
+    background-color: #2596be;
+    border: solid 1px #2596be;
+  }
+  
+  .choicesContainer {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .toDoInfo {
+    border-bottom: 1px solid black;
+    margin-bottom: 2px;
+  }
+  
+  /* CSS for left card */
+  .leftCard {
+    /* border: 1px solid black; */
+    width: 600px;
+    min-height: 215px;
+    /* padding-bottom: 10px; */
+    box-shadow: 2px 2px 7px grey;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding: 10px 15px;
+  }
+  
+  /* CSS for displaying tasks =============================================================*/
+  .High {
+    background-color: #c11114;
+  }
+  .Low {
+    background-color: #bdb00b;
+  }
+  
+  .del {
+    padding: 0;
+    width: 55px;
+    height: 20px;
+    margin: 0;
+  }
+  
+  .blank {
+      padding: 0;
+    width: 55px;
+    height: 20px;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+  }
+  
+  .tagDisplay {
+    width: 85px;
+    text-align: center;
+  }
+  
+  .tagContainer  {
+    min-width: 200px;
+  
+  
+  }
+  
+  .priorityDisplay {
+    width: 55px;
+    text-align: center;
+  }
+  
+  .taskDisplay {
+    width: 386px;
+    margin: 10px 0;
+    overflow-wrap: break-word;
+  }
+  
+  .taskInfoDisplay {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #topList {
+    text-align: center;
+    border-bottom: 2px solid black;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    margin: 10px 180px;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+  /*   body {
+      background-color: lightblue;
+    } */
+    .container2{
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    h1{
+      margin: 10px 60px
+    }
+  }
+  @media only screen and (max-width: 700px) {
+  .priorityDisplay{
+      display: none;
+  }
+    .tagDisplay{
+      display: none;
+  }
+    .leftCard{
+      width: 75%;
+      /*height:*/
+    }
+    .taskDisplay{
+      width: 70%;
+    }
+  }
